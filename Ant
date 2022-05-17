@@ -23,3 +23,40 @@ https://www.hostgator.com.br/
 ---repositorio de referencia para estudo:
 
 https://github.com/devsuperior/sds-dsmovie
+
+
+---banco de dados
+
+h2 (test)
+postgres (dev)
+heroku (prod)
+
+
+--container
+
+docker
+
+-----criando nova imagem e database postgres no docker:
+
+COMANDOS:
+
+Criar imagem: docker pull postgres
+
+Listar imagens: docker images
+
+Rodar container e exportar a porta: docker run --name nome-banco -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+
+Entrar no bash: docker exec -it ''id do container'' bash
+
+Entrar no postgres: psql -U postgres
+
+Criar base de dados: CREATE DATABASE nome-da-base;
+
+Sair: \q
+
+
+----Bibliotecas frontend:
+
+yarn add axios@0.24.0
+https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap
+bootstrap@5.1.3
