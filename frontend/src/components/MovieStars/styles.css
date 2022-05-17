@@ -1,10 +1,10 @@
 .webmovie-stars-container {
-    width: 130px;
-    display: flex;
-    justify-content: space-between;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .webmovie-stars-container svg {
-    width: 22px;
-    height: auto;
+  width: 22px;
+  height: auto;
 }

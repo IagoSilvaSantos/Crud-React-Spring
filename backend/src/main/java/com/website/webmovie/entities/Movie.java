@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_movie")
 public class Movie {
-    
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -21,7 +21,7 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
-	
+
 	@OneToMany(mappedBy = "id.movie")
 	private Set<Score> scores = new HashSet<>();
 
@@ -81,6 +81,5 @@ public class Movie {
 	public Set<Score> getScores() {
 		return scores;
 	}
-
 
 }

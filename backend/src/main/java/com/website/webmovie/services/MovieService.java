@@ -12,17 +12,17 @@ import com.website.webmovie.repositories.MovieRepository;
 
 @Service
 public class MovieService {
-	
+
 	@Autowired
 	private MovieRepository repository;
-	
+
 	@Transactional(readOnly = true)
-	public Page<MovieDTO>findAll(Pageable pageable) {
+	public Page<MovieDTO> findAll(Pageable pageable) {
 		Page<Movie> result = repository.findAll(pageable);
-		Page<MovieDTO> page = result.map( x -> new MovieDTO(x));
+		Page<MovieDTO> page = result.map(x -> new MovieDTO(x));
 		return page;
 	}
-	
+
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
 		Movie result = repository.findById(id).get();
