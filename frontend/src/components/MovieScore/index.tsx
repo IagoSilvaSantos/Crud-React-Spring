@@ -1,10 +1,13 @@
 import MovieStars from "components/MovieStars";
 import './styles.css';
 
-function MovieScore() {
 
-    const score = 3.5;
-    const count = 13;
+type Props = {
+    score: number;
+    count: number;
+}
+
+function MovieScore({score, count}: Props) {
 
     return (
        
@@ -12,7 +15,7 @@ function MovieScore() {
 
         <div className="webmovie-score-container">
         <p className="webmovie-score-value">{score > 0 ? score.toFixed(1) : '-'}</p>
-        <MovieStars />
+        <MovieStars score={score}/>
         <p className="webmovie-score-count">{count} avaliações</p>
     </div>
 
